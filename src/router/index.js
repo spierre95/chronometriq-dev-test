@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Schedule from './../components/Schedule'
-import Staff from './../components/Staff'
+import TheSchedulePage from './../layout/TheSchedulePage';
+import TheStaffPage from './../layout/TheStaffPage';
 
 Vue.use(Router)
 
@@ -10,16 +10,16 @@ export default new Router({
   routes: [
       {
         path: '/#schedule',
-        name: 'Schedule',
-        component: Schedule,
+        name: 'TheSchedulePage',
+        component: TheSchedulePage,
         alias: [
           '/'
         ],
       },
       {
         path: '/#staff',
-        name: 'Staff',
-        component: Staff
+        name: 'TheStaffPage',
+        component: TheStaffPage
       }
     ] 
 })

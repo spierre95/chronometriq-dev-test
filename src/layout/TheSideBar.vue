@@ -3,7 +3,7 @@
     <div class="side-bar-container">
       <ul>
         <li><i class="fa fa-calendar" aria-hidden="true"></i></li>
-        <li><router-link class='nav-link' :to="{ name: 'Schedule' }">Schedule</router-link></li>
+        <li><router-link class='nav-link' :to="{ name: 'TheSchedulePage' }">Schedule</router-link></li>
       </ul>
       <ul>
         <li>
@@ -12,7 +12,7 @@
           staffCount
         }}</b-badge>
         </li>
-        <li><router-link class='nav-link' :to="{ name: 'Staff' }">Staff</router-link></li>
+        <li><router-link class='nav-link' :to="{ name: 'TheStaffPage' }">Staff</router-link></li>
       </ul>
     </div>
     <div class="side-bar-container">
@@ -39,7 +39,7 @@ export default {
 .sidebar {
   width: 66px;
   height: 100vh;
-  background: #ffa500;
+  background: #143157;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ li {
   position: relative;
 }
 ul:hover {
-  background: #2f4f4f;
+  background: #384968;
   border-color: blue;
 }
 .sidebar:hover {

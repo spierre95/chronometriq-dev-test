@@ -9,18 +9,18 @@
       <VModal id="addStaffModal" title="Add New Staff Member">
         <StaffFormModal modalId="addStaffModal"/>
       </VModal>
-      <TableComponent :tableList="staff" />
+      <VTable :tableList="staff" />
     </div>
   </div>
 </template>
 <script>
-import TableComponent from "./TableComponent";
-import VModal from "./VModal"
-import StaffFormModal from '../views/StaffFormModal';
+import VTable from "./../components/VTable";
+import VModal from "./../components/VModal"
+import StaffFormModal from './../components/StaffFormModal';
 export default {
-  name: "Staff",
+  name: "TheStaffPage",
   components: {
-    TableComponent,
+    VTable,
     VModal,
     StaffFormModal
   },

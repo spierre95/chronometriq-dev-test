@@ -1,4 +1,4 @@
-# chronometriq-test-2
+# chronometriq dev test
 
 ## Project setup
 ```

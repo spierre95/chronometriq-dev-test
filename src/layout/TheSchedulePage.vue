@@ -12,7 +12,7 @@ import FullCalendar from "@fullcalendar/vue";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
 export default {
-  name: "Schedule",
+  name: "TheSchedulePage",
   components: {
     FullCalendar, // make the <FullCalendar> tag available
   },
