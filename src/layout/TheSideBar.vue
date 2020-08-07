@@ -21,7 +21,7 @@
           <div class="flex">
             <i class="fa fa-users" aria-hidden="true"></i>
             <router-link :to="{ name: 'Staff' }">Staff</router-link>
-            <b-badge variant="primary">4</b-badge>
+            <b-badge variant="primary">{{staffCount}}</b-badge>
           </div>
         </b-nav-item>
       </b-nav>
@@ -36,15 +36,18 @@
 
 <script>
 import { BSidebar } from "bootstrap-vue";
+import { state } from "./../store";
 export default {
   name: "TheSideBar",
   components: {
     "b-sidebar": BSidebar,
   },
+  computed: {
+    staffCount() {
+      return state.staffCount;
+    }
+  }
 };
 </script>
 <style lang="scss">
-// #sidebar-footer {
-//   background-color: #000;
-// }
 </style>

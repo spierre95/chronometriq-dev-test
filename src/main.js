@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueSwal from 'vue-swal';
 Vue.use(VueSwal);
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 
 //mock server 
 new Server({

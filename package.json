@@ -16,7 +16,8 @@
     "mirage": "0.0.7",
     "vue": "^2.6.11",
     "vue-router": "^3.4.1",
-    "vue-swal": "^1.0.0"
+    "vue-swal": "^1.0.0",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
