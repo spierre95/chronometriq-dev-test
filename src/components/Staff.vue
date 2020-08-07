@@ -3,9 +3,8 @@
       <h1>Staff</h1>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'Hello',
+  name: 'Staff',
 }
 </script>

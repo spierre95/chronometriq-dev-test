@@ -12,10 +12,17 @@
     >
       <b-nav vertical fill class="w-25">
         <b-nav-item active>
+          <div class="d-flex">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
           <router-link :to="{ name: 'Schedule' }">Schedule</router-link>
+          </div>
         </b-nav-item>
         <b-nav-item active>
-          <router-link :to="{ name: 'Staff' }">Staff</router-link>
+          <div class="flex">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <router-link :to="{ name: 'Staff' }">Staff</router-link>
+            <b-badge variant="primary">4</b-badge>
+          </div>
         </b-nav-item>
       </b-nav>
       <template v-slot:footer>
