@@ -24,22 +24,29 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
+      <b-form-group id="group" label="Position:" label-for="groupInput">
         <b-form-select
-          id="input-3"
-          v-model="form.food"
-          :options="foods"
+          id="groupInput"
+          v-model="form.group"
+          :options="groups"
           required
         ></b-form-select>
       </b-form-group>
+      <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
   </div>
 </template>
 
 <script>
-import { mutations, state } from '../../store';
+import { mutations, state } from './../store';
 export default {
     name: "StaffFormModal",
+    props: {
+      modalId: {
+        type: String,
+        default: ""
+      }
+    },
     data: function(){
      return {
        form: {
@@ -56,19 +63,17 @@ export default {
       }
     },
     methods : {
-      onSubmit: function(){
+      onSubmit: function(e){
+        e.preventDefault();
         const vm = this
-        setTimeout( () => {
-          vm.updateStaffCount()
-        }, 4000)
+        e.preventDefault();
+        this.updateStaffCount()
+        this.$bvModal.hide(this.modalId)
       },
       updateStaffCount: function(){
         const updatedStaffCount = this.staffCount + 1 
         mutations.setCount(updatedStaffCount)
       }
     }
-
-
-    
 }
 </script>

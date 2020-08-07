@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <div class="d-flex justify-content-center">
+    <div class="wrapper">
       <TheSideBar />
-      <router-view></router-view>
+      <div class="row">
+        <div class="col-12">
+          <div class="container">
+            <router-view></router-view>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,4 +23,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+</style>

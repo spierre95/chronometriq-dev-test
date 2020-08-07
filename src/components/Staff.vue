@@ -5,9 +5,10 @@
   <div v-else >
     <h1>Staff</h1>
     <div class="container">
-      <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-      <v-modal>
-      </v-modal>
+      <b-button v-b-modal.addStaffModal>Launch demo modal</b-button>
+      <VModal id="addStaffModal" title="create new Staff Member" :showFooter="false">
+        <StaffFormModal modalId="addStaffModal"/>
+      </VModal>
       <TableComponent :tableList="staff" />
     </div>
   </div>
@@ -15,11 +16,13 @@
 <script>
 import TableComponent from "./TableComponent";
 import VModal from "./VModal"
+import StaffFormModal from '../views/StaffFormModal';
 export default {
   name: "Staff",
   components: {
     TableComponent,
-    VModal
+    VModal,
+    StaffFormModal
   },
   created() {
     this.fetching = true;

@@ -10,11 +10,11 @@ Also since I am not updating the JSON file I figured this would be a simple solu
 */
 
 export const state = Vue.observable({
-  count: staffData.length
+  staffCount: staffData.length
 });
 
 export const mutations = {
   setCount(count) {
-    state.count = count;
+    state.staffCount = count;
   }
 };
