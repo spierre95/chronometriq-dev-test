@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal :id="id" :title="title" :hideFooter="showFooter">
+    <b-modal :id="id" :title="title">
       <slot></slot>
     </b-modal>
   </div>
@@ -18,10 +18,6 @@ export default {
       type: String,
       default: "",
     },
-    showFooter: {
-        type: Boolean,
-        default: true
-    }
   },
 };
 </script>

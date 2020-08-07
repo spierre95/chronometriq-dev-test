@@ -11,13 +11,13 @@ export default new Router({
       {
         path: '/#schedule',
         name: 'Schedule',
-        component: Schedule
-      },
-      {
-        path: '/#staff',
+        component: Schedule,
         alias: [
           '/'
         ],
+      },
+      {
+        path: '/#staff',
         name: 'Staff',
         component: Staff
       }

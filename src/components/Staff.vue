@@ -1,12 +1,12 @@
 <template>
-  <div v-if="fetching">
-    <b-spinner label="Loading..."></b-spinner>
+  <div class="loading-container d-flex justify-content-center align-items-center" v-if="fetching">
+    <b-spinner class="loading-spinner" variant="primary" label="Spinning" style="width: 50px; height: 50px;" ></b-spinner>
   </div>
   <div v-else >
-    <h1>Staff</h1>
+    <h1 class="header-title">Staff</h1>
     <div class="container">
-      <b-button v-b-modal.addStaffModal>Launch demo modal</b-button>
-      <VModal id="addStaffModal" title="create new Staff Member" :showFooter="false">
+      <b-button class="launch-modal-btn" variant="outline-primary" v-b-modal.addStaffModal>Create</b-button>
+      <VModal id="addStaffModal" title="Add New Staff Member">
         <StaffFormModal modalId="addStaffModal"/>
       </VModal>
       <TableComponent :tableList="staff" />
@@ -47,3 +47,14 @@ export default {
   },
 };
 </script>
+<style> 
+
+.loading-container {
+  margin-top: 150px;
+}
+
+.launch-modal-btn {
+  margin: 30px 0;
+}
+
+</style>

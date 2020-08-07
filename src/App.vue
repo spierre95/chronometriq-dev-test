@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <div class="wrapper">
-      <TheSideBar />
-      <div class="row">
-        <div class="col-12">
-          <div class="container">
-            <router-view></router-view>
-          </div>
+    <TheSideBar />
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <router-view></router-view>
         </div>
       </div>
     </div>
@@ -24,9 +22,21 @@ export default {
 </script>
 
 <style lang="scss">
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+//override bootstrap
+#app {
+  
+  // causing wierd glitch when opening side bar
+  .row {
+    margin: 0;
+  }
+  .container {
+    max-width: 850px;
+  }
+}
+
+.header-title {
+  margin: 30px;
+  text-align: center;
+  color: blue;
 }
 </style>

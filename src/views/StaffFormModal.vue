@@ -32,48 +32,64 @@
           required
         ></b-form-select>
       </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button class="submit-btn" type="submit" variant="primary"
+        >Submit</b-button
+      >
     </b-form>
   </div>
 </template>
 
 <script>
-import { mutations, state } from './../store';
+import { mutations, state } from "./../store";
 export default {
-    name: "StaffFormModal",
-    props: {
-      modalId: {
-        type: String,
-        default: ""
-      }
+  name: "StaffFormModal",
+  props: {
+    modalId: {
+      type: String,
+      default: "",
     },
-    data: function(){
-     return {
-       form: {
-          firstName: '',
-          LastName: '',
-          group: null,
-        },
-        groups: [{ text: 'Select One', value: null }, 'Admin', 'Doctor', 'Nurse'],
-      }
-    },
-    computed : {
-      staffCount(){
-        return state.staffCount
-      }
-    },
-    methods : {
-      onSubmit: function(e){
-        e.preventDefault();
-        const vm = this
-        e.preventDefault();
-        this.updateStaffCount()
-        this.$bvModal.hide(this.modalId)
+  },
+  data: function() {
+    return {
+      form: {
+        firstName: "",
+        LastName: "",
+        group: null,
       },
-      updateStaffCount: function(){
-        const updatedStaffCount = this.staffCount + 1 
-        mutations.setCount(updatedStaffCount)
-      }
-    }
-}
+      groups: [{ text: "Select One", value: null }, "Admin", "Doctor", "Nurse"],
+    };
+  },
+  computed: {
+    staffCount() {
+      return state.staffCount;
+    },
+  },
+  methods: {
+    onSubmit: function(e) {
+      e.preventDefault();
+      const vm = this;
+      e.preventDefault();
+      this.updateStaffCount();
+      this.$bvModal.hide(this.modalId);
+    },
+    updateStaffCount: function() {
+      const updatedStaffCount = this.staffCount + 1;
+      mutations.setCount(updatedStaffCount);
+    },
+  },
+};
 </script>
+
+<style lang="scss" >
+.submit-btn {
+  float: right;
+  margin: 15px 0;
+}
+
+//override bootstrap
+#addStaffModal {
+  .modal-footer {
+    display: none;
+  }
+}
+</style>

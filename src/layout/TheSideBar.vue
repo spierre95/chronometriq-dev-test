@@ -17,8 +17,8 @@
     </div>
     <div class="side-bar-container">
       <ul>
-        <li><i class="fa fa-power-off fa-2x"></i></li>
-        <li>Logout</li>
+        <li><i class="fa fa-github" aria-hidden="true"></i></li>
+        <li><a target="_blank" href="https://github.com/spierre95/chronometriq-dev-test">View Code</a></li>
       </ul>
     </div>
   </div>
@@ -44,6 +44,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  z-index: 1000;
 }
 
 .side-bar-container {
@@ -73,6 +75,7 @@ li:nth-child(2) {
   opacity: 0;
   margin-left: 5px;
   transition: all 0.4s ease;
+  white-space: nowrap;
 }
 
 .sidebar:hover {
@@ -99,13 +102,13 @@ i {
 
 .staff-count {
   position: absolute;
-  right: 0;
+  right: -3px;
+  top: 3px;
 }
 
 .nav-link {
   color: #5f9ea0;
   text-decoration: none;
 }
-
 
 </style>

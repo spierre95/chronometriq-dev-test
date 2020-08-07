@@ -1,5 +1,10 @@
 <template>
-  <FullCalendar :options="calendarOptions" />
+<div>
+  <h1 class="header-title">Schedule</h1>
+  <div class="container">
+    <FullCalendar :options="calendarOptions" />
+  </div>
+</div>
 </template>
 
 <script>
